@@ -2,7 +2,7 @@
     "title": "Studbolt's keyboard shortcuts",
     "rules": [
         {
-            "description": "⇪{i,j,k,l} -> {↑,←,↓,→} (Studbolt)",
+            "description": "Caps(⇪) + IJKL → Arrow Keys",
             "manipulators": [
                 {
                     "from": {
@@ -183,7 +183,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + ⇧+ {j/l} -> Word Boundary Selection (Studbolt)",
+            "description": "Caps(⇪) + Cmd(⌘) + Shift(⇧) + J/L → Word Boundary Selection",
             "manipulators": [
                 {
                     "from": {
@@ -276,7 +276,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + ⇧ + {u/o} -> Select text to beginning/end of document (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + U/O → Document Boundary Selection",
             "manipulators": [
                 {
                     "from": {
@@ -369,7 +369,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + {j/l} -> Select text by word boundary (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + J/L -> Move cursor to beginning/end of line",
             "manipulators": [
                 {
                     "from": {
@@ -458,7 +458,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + u/o -> Move cursor to beginning/end of document (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + Shift(⇧) + J/L -> Select All Left/Right",
             "manipulators": [
                 {
                     "from": {
@@ -547,7 +547,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + i/k -> Move cursor up/down one line (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + [Option (   )] I/K -> Move cursor up/down One Line",
             "manipulators": [
                 {
                     "from": {
@@ -636,7 +636,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + j/l -> Jump to beginning/end of line (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + I/K ->  Jump to beginning/end of line",
             "manipulators": [
                 {
                     "from": {
@@ -725,7 +725,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + ⇧ + j/l -> Select text to beginning/end of line (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + Shift(⇧) + J/L -> Highlight text to beginning/end of line",
             "manipulators": [
                 {
                     "from": {
@@ -818,7 +818,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌘ + n/p -> backspace/delete by word boundary (Studbolt)",
+            "description": "Caps(⇪) + Cmd (⌘) + N/P -> Backspace/Delete by word boundary",
             "manipulators": [
                 {
                     "from": {
@@ -907,7 +907,7 @@
             ]
         },
         {
-            "description": "⇪ + ⌥ + n/p -> backspace/delete by word boundary (Studbolt)",
+            "description": "Caps(⇪) + ⌥ (Option) + N/P -> Backspace/Delete by word boundary",
             "manipulators": [
                 {
                     "from": {
@@ -996,7 +996,7 @@
             ]
         },
         {
-            "description": "⇪ + n/p -> backspace/delete (studbolt)",
+            "description": "Caps(⇪) + N/P -> Delete/Backspace",
             "manipulators": [
                 {
                     "from": {
@@ -1077,7 +1077,7 @@
             ]
         },
         {
-            "description": "⇪ + [⇧] + y/h -> Page up/down with optional text highlighting (studbolt)",
+            "description": "Caps(⇪) + [Shift(⇧)] + Y/H -> Scroll up/down (Optionally hold Shift(⇧) to highlight)",
             "manipulators": [
                 {
                     "from": {
@@ -1224,7 +1224,7 @@
             ]
         },
         {
-            "description": "⇧ + ⌫ -> ⌦(studbolt)",
+            "description": "Caps(⇧) + Delete (⌫) -> Forward Delete (⌦)",
             "manipulators": [
                 {
                     "from": {
@@ -1303,7 +1303,7 @@
             ]
         },
         {
-            "description": "🌐` -> ^F2 (Move focus to Menu bar)",
+            "description": "Fn Globe (🌐) key + Backtick(`) -> CTRL(^) + F2 (Move focus to Menu bar)",
             "manipulators": [
                 {
                     "from": {
@@ -1331,7 +1331,7 @@
             ]
         },
         {
-            "description": "🌐⇧` -> ^F2 (Move focus to Menu bar)",
+            "description": "Fn Globe (🌐) key + Shift(⇧) + Backtick(`) -> Control(^) + F2 (Move focus to Menu bar)",
             "manipulators": [
                 {
                     "from": {
@@ -1360,7 +1360,7 @@
             ]
         },
         {
-            "description": "Swap 'Enter Full Screen' and 'Fill' (Swaps 🌐F and 🌐^F)",
+            "description": "Fn Globe (🌐) key + F <-> Fn Globe (🌐) key + Control(^) + F (Swap 'Enter Full Screen' and 'Fill')",
             "manipulators": [
                 {
                     "from": {
@@ -1405,7 +1405,7 @@
             ]
         },
         {
-            "description": "🌐3 -> ^⌥E (1st 2/3 of screen rectangle app shortcut)",
+            "description": "Fn Globe (🌐) key + 3 ->  Control(^) + Option (⌥) + E (Snap window to 2/3 of screen)",
             "manipulators": [
                 {
                     "from": {
@@ -1453,7 +1453,7 @@
             ]
         },
         {
-            "description": "🌐{↑,←,R,↓,→} to 🌐^{F, ←, R, R, →}",
+            "description": "Fn Globe (🌐) key + {↑,←,R,↓,→} → Fn Globe (🌐) key + {^F, ←, ^R, ^R, →}",
             "manipulators": [
                 {
                     "from": {
