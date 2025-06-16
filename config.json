@@ -1,5 +1,5 @@
 {"title":"Studbolt's keyboard shortcuts","rules":[
-{"description":"Caps(⇪) + IJKL → Arrow Keys","manipulators":[
+{"description":"Caps(⇪) + IJKL/UO → Navigation + Word/Line/Document Boundaries","manipulators":[
 {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
 {"from":{"key_code":"i","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"p","modifiers":["left_control"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"i","modifiers":{"optional":["any"]}},"to":[{"key_code":"up_arrow"}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
@@ -22,29 +22,29 @@
 {"from":{"key_code":"o","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"down_arrow","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"o","modifiers":{"optional":["any"]}},"to":[{"key_code":"right_arrow","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
 ]},
-{"description":"Caps(⇪) + Cmd (⌘) + N/P -> Backspace/Delete by word boundary","manipulators":[
+{"description":"Caps(⇪) + Cmd (⌘) + N/P → Delete word backward/forward","manipulators":[
 {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
 {"from":{"key_code":"n","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_or_backspace","modifiers":["left_option"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"p","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_forward","modifiers":["left_option"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
 ]},
-{"description":"Caps(⇪) + ⌥ (Option) + N/P -> Backspace/Delete by word boundary","manipulators":[
+{"description":"Caps(⇪) + Option(⌥) + N/P → Delete word backward/forward (Alt behavior)","manipulators":[
 {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
 {"from":{"key_code":"n","modifiers":{"mandatory":["left_option"]}},"to":[{"key_code":"delete_or_backspace","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"p","modifiers":{"mandatory":["left_option"]}},"to":[{"key_code":"delete_forward","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
 ]},
-{"description":"Caps(⇪) + N/P -> Delete/Backspace","manipulators":[
+{"description":"Caps(⇪) + N/P → Delete character backward/forward","manipulators":[
 {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
 {"from":{"key_code":"n","modifiers":{"mandatory":[]}},"to":[{"key_code":"delete_or_backspace","modifiers":[]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"p","modifiers":{"mandatory":[]}},"to":[{"key_code":"delete_forward","modifiers":[]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
 ]},
-{"description":"Caps(⇪) + [Shift(⇧)] + Y/H -> Scroll up/down (Optionally hold Shift(⇧) to highlight)","manipulators":[
+{"description":"Caps(⇪) + [Shift(⇧)] + Y/H → Scroll up/down (with optional highlight)","manipulators":[
 {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
 {"from":{"key_code":"y","modifiers":{"optional":["left_shift"]}},"to":[{"key_code":"up_arrow","modifiers":["fn"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"y","modifiers":{"mandatory":["left_command"],"optional":["left_shift"]}},"to":[{"key_code":"up_arrow","modifiers":["fn"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"h","modifiers":{"optional":["left_shift"]}},"to":[{"key_code":"down_arrow","modifiers":["fn"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
 {"from":{"key_code":"h","modifiers":{"mandatory":["left_command"],"optional":["left_shift"]}},"to":[{"key_code":"down_arrow","modifiers":["fn"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
 ]},
-{"description":"Caps(⇧) + Delete (⌫) -> Forward Delete (⌦)","manipulators":[
+{"description":"Caps(⇪) + Shift(⇧) + Delete (⌫) → Forward Delete (⌦); Cmd(⌘) + Delete (⌫) → Delete word","manipulators":[
 {"from":{"key_code":"delete_or_backspace","modifiers":{"mandatory":["shift"]}},"to":[{"key_code":"delete_forward"}],"type":"basic"},
 {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
 {"from":{"key_code":"delete_or_backspace","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_or_backspace","modifiers":["left_option"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
@@ -77,5 +77,11 @@
 {"from":{"key_code":"right_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"right_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic","conditions":[]},
 {"from":{"key_code":"up_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"up_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic","conditions":[]},
 {"from":{"key_code":"down_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"down_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic","conditions":[]}
+]},
+{"description":"Fn Globe (🌐) + Arrow Keys → Windows-style Window Snapping (Rectangle Pro: Ctrl(⌃) + Opt(⌥) + Cmd(⌘))","manipulators":[
+{"from":{"key_code":"left_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"left_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"},
+{"from":{"key_code":"right_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"right_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"},
+{"from":{"key_code":"up_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"up_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"},
+{"from":{"key_code":"down_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"down_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"}
 ]}
 ]}
