@@ -1,5 +1,9 @@
-  {"title":"Studbolt's keyboard shortcuts","rules":[
-  {"description":"Cmd(⌘) + double-tap q → Close application","manipulators":[{"conditions":[{"name":"command-q","type":"variable_if","value":1}],"from":{"key_code":"q","modifiers":{"mandatory":["command"]}},"to":[{"key_code":"q","modifiers":["left_command"]}],"type":"basic"},{"from":{"key_code":"q","modifiers":{"mandatory":["command"]}},"to":[{"set_variable":{"name":"command-q","value":1}}],"to_delayed_action":{"to_if_canceled":[{"set_variable":{"name":"command-q","value":0}}],"to_if_invoked":[{"set_variable":{"name":"command-q","value":0}}]},"type":"basic"}]},{"description":"Fn Globe (🌐) + S → Control(^) + Command(⌘) + S","manipulators":[{"from": {"key_code": "s","modifiers": {"mandatory": ["fn"]}},"to": [{"key_code": "s","modifiers": ["left_control", "left_command"]}],"type": "basic"}]},
+{"title":"Studbolt's keyboard shortcuts","rules":[
+  {"description":"Cmd(⌘) + double-tap q → Close application","manipulators":[
+  {"from":{"key_code":"q","modifiers":{"mandatory":["command"]}},"to":[{"key_code":"q","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"command-q","type":"variable_if","value":1}]},
+  {"from":{"key_code":"q","modifiers":{"mandatory":["command"]}},"to":[{"set_variable":{"name":"command-q","value":1}}],"to_delayed_action":{"to_if_canceled":[{"set_variable":{"name":"command-q","value":0}}],"to_if_invoked":[{"set_variable":{"name":"command-q","value":0}}]},"type":"basic"}]},
+  {"description":"Fn Globe (🌐) + S → Control(^) + Command(⌘) + S","manipulators":[
+  {"from": {"key_code": "s","modifiers": {"mandatory": ["fn"]}},"to": [{"key_code": "s","modifiers": ["left_control", "left_command"]}],"type": "basic"}]},
   {"description":"Swap Cmd(⌘) + Delete(⌫)/Forward Delete(⌦) and Option(⌥) + Delete(⌫)/Forward Delete(⌦)","manipulators":[
   {"from":{"key_code":"delete_forward","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_forward","modifiers":["left_option"]}],"type":"basic"},
   {"from":{"key_code":"delete_forward","modifiers":{"mandatory":["left_option"]}},"to":[{"key_code":"delete_forward","modifiers":["left_command"]}],"type":"basic"},
@@ -13,10 +17,9 @@
   {"description":"Caps(⇪) + Cmd(⌘)/Opt(⌥) + H/; → Delete word/line backward/forward","manipulators":[
   {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
   {"from":{"key_code":"h","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_or_backspace","modifiers":["left_option"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
-  {"from":{"key_code":"semicolon","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_forward","modifiers":["left_option"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
-  {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
+  {"from":{"key_code":";","modifiers":{"mandatory":["left_command"]}},"to":[{"key_code":"delete_forward","modifiers":["left_option"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
   {"from":{"key_code":"h","modifiers":{"mandatory":["left_option"]}},"to":[{"key_code":"delete_or_backspace","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
-  {"from":{"key_code":"semicolon","modifiers":{"mandatory":["left_option"]}},"to":[{"key_code":"delete_forward","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
+  {"from":{"key_code":";","modifiers":{"mandatory":["left_option"]}},"to":[{"key_code":"delete_forward","modifiers":["left_command"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
   ]},
   {"description":"Caps(⇪) [+ Cmd(⌘)/Opt(⌥) [+ Shift(⇧) to highlight]] + IJKL/UO → Navigate word/line/doc","manipulators":[
   {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
@@ -82,5 +85,20 @@
   {"from":{"key_code":"right_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"right_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"},
   {"from":{"key_code":"up_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"up_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"},
   {"from":{"key_code":"down_arrow","modifiers":{"mandatory":["fn"]}},"to":[{"key_code":"down_arrow", "modifiers":["left_control", "left_option", "left_command"]}],"type":"basic"}
+  ]},
+  {"description": "Caps(⇪) + H/Semicolon → Delete character backward/forward","manipulators": [
+  {"from": {"key_code": "caps_lock","modifiers": { "optional": ["any"] }},"to": [{"set_variable": {"name": "caps_lock pressed","value": 1}}],"to_after_key_up": [{"set_variable": {"name": "caps_lock pressed","value": 0}}],"to_if_alone": [{ "key_code": "caps_lock" }],"type": "basic"},
+  {"from": {"key_code": "h","modifiers": { "mandatory": [] }},"to": [{"key_code": "delete_or_backspace","modifiers": []}],"conditions": [{"name": "caps_lock pressed","type": "variable_if","value": 1}],"type": "basic"},
+  {"from": {"key_code": "semicolon","modifiers": { "mandatory": [] }},"to": [{"key_code": "delete_forward","modifiers": []}],"conditions": [{"name": "caps_lock pressed","type": "variable_if","value": 1}],"type": "basic"}
+  ]},
+  {"description": "Caps Lock + D to Show Desktop (CTRL + F11 (remapped from F11))","manipulators": [
+  {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
+  {"from":{"key_code":"d","modifiers":{"mandatory":[]}},"to":[{"key_code":"f11","modifiers":["left_control"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]},
+  {"from":{"key_code":"d","modifiers":{"mandatory":["fn"],"optional":["any"]}},"to":[{"key_code":"f11","modifiers":["left_control"]}],"type":"basic"}
+  ]},
+  {"description": "Caps Lock + Enter to Shift + Enter","manipulators": [
+  {"from":{"key_code":"caps_lock","modifiers":{"optional":["any"]}},"to":[{"set_variable":{"name":"caps_lock pressed","value":1}}],"to_after_key_up":[{"set_variable":{"name":"caps_lock pressed","value":0}}],"to_if_alone":[{"key_code":"caps_lock"}],"type":"basic"},
+  {"from":{"key_code":"return_or_enter","modifiers":{"mandatory":[]}},"to":[{"key_code":"return_or_enter","modifiers":["left_shift"]}],"type":"basic","conditions":[{"name":"caps_lock pressed","type":"variable_if","value":1}]}
   ]}
-  ]}
+]}
+
